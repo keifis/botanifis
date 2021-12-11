@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<title>plant.html</title>
+	</head>
+	<body>
+		<h1>Plant Application</h1>
+		<form action="/add" method="POST">
+			<input type="text" name="name" placeholder="input plant!!"/>
+			<input type="submit" value="Add"/>
+		</form>
+		<!--pタグの下にaタグを追加-->
+		<br>
+		{% for d in data %}
+			<p>{{d.id}} : {{d.name}}</p>
+			<a href="/del_plant/{{ d.id }}">[ delete ]</a>
+		{% endfor %}
+		<!---------->
+	</body>
+</html>
